@@ -11,6 +11,22 @@ for (( i=0;i<$ELEMENTS;i++)); do
     echo ${ARRAY[${i}]}
 done
 
+foo[0]="one"
+foo[1]="two"
+echo ${foo[1]}  # prints "two"
+
+array=(a b c)
+echo $array       # prints a
+echo ${array[@]}  # prints a b c
+echo ${array[*]}  # prints a b c
+
+foo=(a b c)
+bar=("${foo[@]}")
+echo ${bar[1]}    # prints b
+
+ echo $10     # prints the first argument, followed by 0
+ echo ${10}   # prints the tenth argument
+
 directory="../res"
 
 # bash check if directory exists

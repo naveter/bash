@@ -7,6 +7,10 @@ RESULT2=$1+$2
 echo $1+$2=$RESULT2 ' -> # declare -i RESULT2; RESULT2=$1+$2'
 echo $1+$2=$(($1 + $2)) ' -> # $(($1 + $2))'
 
+foo
+(( foo = 3 )) # Sets foo to 3 with spaces
+unset foo
+
 
 # There are two formats for arithmetic expansion: $[ expression ]
 # and $(( expression #)) its your choice which you use
