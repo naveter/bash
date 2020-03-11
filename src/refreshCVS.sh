@@ -23,7 +23,7 @@ if [ -z "$CVSTO" ]; then
     exit 1
 fi
 
-if [ -d "$ROOT"/"$CVSTO" ]
+if [ -d "$ROOT"/"$CVSTO" ] # -O
 then
     echo "Remove diretory $ROOT/$CVSTO"
     rm -dfR "$ROOT"/"$CVSTO"
