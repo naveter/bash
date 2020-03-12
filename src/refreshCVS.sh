@@ -11,7 +11,7 @@ CVSTO=
 case "$1" in 
     dima|ilya)
         CVSTO=$1
-        ;;
+        ;; #Using ‘;;&’ in place of ‘;;’ causes the shell to test the patterns in the next clause
     *)
         echo "USAGE: refreshCVS.sh dima|ilya" 
         exit 1
@@ -23,7 +23,7 @@ if [ -z "$CVSTO" ]; then
     exit 1
 fi
 
-if [ -d "$ROOT"/"$CVSTO" ] # -O
+if [ -d "$ROOT"/"$CVSTO" ] # -O or -w
 then
     echo "Remove diretory $ROOT/$CVSTO"
     rm -dfR "$ROOT"/"$CVSTO"
