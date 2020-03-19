@@ -60,3 +60,18 @@ menu.choose("123"); // Выбранное значение: 123
 window.onerror = function(message, url, line, col, error) {
     alert(`${message}\n В ${line}:${col} на ${url}`);
 };
+
+class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "ValidationError";
+  }
+}
+
+class PropertyRequiredError extends ValidationError {
+  constructor(property) {
+    super("Нет свойства: " + property);
+    this.name = "PropertyRequiredError";
+    this.property = property;
+  }
+}
