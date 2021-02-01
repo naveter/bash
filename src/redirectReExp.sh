@@ -6,8 +6,8 @@ then
     echo $line
 fi
 
-# coproc [NAME] command [redirections]
 # find . -type f -name '*.html' -print | parallel gzip
+# while read line; do echo $line; done < company.txt
 
 while IFS= read -r x; do
 		echo $x

@@ -20,11 +20,11 @@ for f in $( ls ../ ); do
 	echo $f
 done
 
-# from cmd like single line
+# from cmd like multiline
 for f in $( ls ../ ); do echo $f; done
 
 DIR="."
-# Controlling a loop with bash read command by redirecting STDOUT as a STDIN to while loop
+# read current dir, find files with 'r' and translate it with '_'
 find $DIR -type f | while read file; do
     if [[ "$file" = *r* ]]; then
         # substitute r with "_" character and print it

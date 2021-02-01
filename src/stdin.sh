@@ -46,7 +46,7 @@ ARRAY=(a b c)
 
  foo=bar
  bar=42
- echo ${!foo}  # prints $bar, which is 42
+ echo ${!foo}  # eval by var name, prints $bar, which is 42
 
  #This happens because "$*" combines all arguments into a single string, while "$@" requotes the individual arguments.
  arr=("a b"  " c d    e")
