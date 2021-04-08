@@ -57,4 +57,4 @@ echo Number of elements: ${#ARRAY[@]}
 echo ${ARRAY[@]}
 # restore stdin from filedescriptor 10
 # and close filedescriptor 10
-exec 0<&10 10<&
+exec 0<&10 <&-

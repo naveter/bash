@@ -21,9 +21,9 @@ echo Number of arguments passed: $# ' -> echo Number of arguments passed: $#'
 echo `uname -o` && uname -o
 
 # bash trap command
-trap bashtrap INT
+trap bashtrap SIGINT
 # bash clear screen command
-clear;
+clear
 # bash trap function is executed when CTRL-C is pressed:
 # bash prints message => Executing bash trap subrutine !
 bashtrap()
